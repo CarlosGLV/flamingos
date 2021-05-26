@@ -1,0 +1,718 @@
+/* *************************************************** reset */
+html, body,
+h1, h2, h3, h4, h5, h6,
+ul, li, 
+p, div, 
+form, fieldset, label, button, input, select, textarea,
+img { 
+	margin: 0; 
+	padding: 0; 
+	border: none; 
+	outline: none; 
+}
+a, 
+a:hover,
+a:active { 
+	color: #ea6657;
+	text-decoration: underline;
+	outline: none; 
+}
+ul li { 
+	list-style: none; 
+}
+strong {
+  	font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  	line-height: 1;
+  	text-rendering: optimizelegibility;
+  	margin: 0;
+}
+img {
+  	border: 0;
+  	-ms-interpolation-mode: bicubic;
+  	outline: 0;
+}
+.clear {
+	clear: both;	
+}
+/* *************************************************** fonts */
+@font-face {
+    font-family: 'futura-book';
+    src: url('../fonts/futura-book.eot');
+    src: url('../fonts/futura-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futura-book.woff2') format('woff2'),
+         url('../fonts/futura-book.woff') format('woff'),
+         url('../fonts/futura-book.ttf') format('truetype'),
+         url('../fonts/futura-book.svg#futura-book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* *************************************************** */
+html { 
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: auto;
+	background: #bccbca;
+	color: #656565;
+	font-family: "futura-book", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	box-shadow: inset 0 0 0 10px #fff;
+	-moz-box-shadow: inset 0 0 0 10px #fff;
+	-webkit-box-shadow: inset 0 0 0 10px #fff;
+}
+.container {
+	font-size: 0.750em;
+}
+/* ************************** header */
+header {
+	border-top: 10px solid #FFF;
+}
+header .container {
+	width: 100%;
+	margin: 0 auto;
+	height: 400px;
+	background: url(../img/header-bg.jpg) repeat center top;
+}
+header h1 {
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 1.500em;
+	color: #454545;
+}
+header h1 img {
+	display: block;
+	padding-top: 60px;
+	margin: 0 auto;	
+}
+header p {
+	width: 520px;
+	margin: 10px auto;
+	color: #454545;
+	text-align: center;	
+}
+header p strong {
+	color: #ea6657;
+	text-decoration: none;
+	font-weight: normal;	
+}
+/* ************************** section */
+section {
+	margin: 0 auto;
+}
+section .container {
+	width: 100%;
+	margin: 0 auto;
+}
+/* section#gallery */
+section#gallery {
+	
+}
+section#gallery .loading {
+	width: 100%;
+	margin: 0 auto;
+	height: 3000px;
+}
+section#gallery .loading p {
+	font-size: 0.750em;
+	text-align: center;
+	color: #333;
+	padding-top: 220px;
+}
+section#gallery .loading p span {
+	display: block;
+	margin-top: 5px;	
+}
+section#gallery .container {
+	display: none;
+}
+section#gallery ul {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	/* height: se calcula en el scripts.js */
+}
+section#gallery ul li {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	list-style: none;
+	height: auto;
+	position: absolute;
+}
+
+section#gallery ul li.banner {
+	position: absolute;
+	z-index: 30;
+}
+section#gallery ul li.banner .banner-int {
+	position: relative;
+	width: 100%;
+	height: 100%;	
+}
+section#gallery ul li.banner .banner-int p {
+	text-align: center;
+	width: 75%;
+	margin: 0 auto;	
+	line-height: 1.15em;
+	position: absolute;
+}
+section#gallery ul li.banner .banner-int p strong {
+	display: block;
+	font-size: 1.500em;
+	color: #333;
+	font-weight: normal;
+	text-transform: uppercase;	
+	margin: 0 0 15px;
+}
+section#gallery ul li.banner .banner-int .tic {
+	position: absolute;
+	z-index: 90;
+	width: 20px;
+	height: 20px;
+	background-size: 80px 20px !important;
+}
+section#gallery ul li.image {
+	z-index: 10;
+	min-height: 50px;
+}
+section#gallery ul li.image img {
+	width: 100%;
+	height: auto;	
+}
+
+
+/* bloque 1 */
+section#gallery ul.bloque1 li.banner-chauffeur {
+	width: 33.4%;
+	height: 65%; /* Ocupa el % del ul contenedor */
+	top: 0;
+	right: 0;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque1 li.banner-chauffeur .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat 0 0;
+	left: -20px;
+	top: 50%;
+	margin-top: -10px;
+}
+section#gallery ul.bloque1 li.image-chauffeur {
+	width: 66.6%;
+	top: 0;
+	left: 0;
+}
+section#gallery ul.bloque1 li.image-vip {
+	width: 33.4%;
+	right: 0;
+	bottom: 0;
+}
+/* bloque 2 */
+section#gallery ul.bloque2 li.banner-vip {
+	width: 16.7%;
+	/*min-height: 50%;*/ /* Ocupa el % del ul contenedor (min-height para los banners más pequeños) */
+	height: 40%; /* Ocupa el % del ul contenedor (min-height para los banners más pequeños) */
+	right: 0;
+	top: 0;
+	background: #a3b6b4 url(../img/banner-blue.png) repeat 50% 50%;
+}
+section#gallery ul.bloque2 li.banner-vip .banner-int .tic {
+	background: url(../img/banner-blue-tic.png) no-repeat -60px 0;
+	top: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+section#gallery ul.bloque2 li.banner-vip .banner-int p {
+	color: #454545;	
+}
+section#gallery ul.bloque2 li.banner-rent-a-house {
+	width: 33.4%;
+	height: 65%;
+	top: 0;
+	left: 0;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque2 li.banner-rent-a-house .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat -40px 0;
+	right: -20px;
+	top: 50%;
+	margin-top: -10px;
+}
+section#gallery ul.bloque2 li.image-rent-a-house {
+	width: 66.6%;
+	top: 0;
+	right: 0;
+}
+section#gallery ul.bloque2 li.image-hotels {
+	width: 33.4%;
+	left: 0;
+	bottom: 0;
+}
+/* bloque 3 */
+section#gallery ul.bloque3 li.banner-hotels {
+	width: 33.4%;
+	height: 100%; /* 100% de la altura de su ul */
+	top: 0;
+	left: 0;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque3 li.banner-hotels .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat -40px 0;
+	right: -20px;
+	top: 50%;
+	margin-top: -10px;
+}
+section#gallery ul.bloque3 li.banner-events {
+	width: 33.4%;
+	height: 100%;
+	top: 0;
+	left: 33.4%;
+	background: #a3b6b4 url(../img/banner-blue.png) repeat 50% 50%;
+}
+section#gallery ul.bloque3 li.banner-events .banner-int .tic {
+	background: url(../img/banner-blue-tic.png) no-repeat -20px 0;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+section#gallery ul.bloque3 li.banner-events .banner-int p {
+	color: #454545;	
+}
+section#gallery ul.bloque3 li.banner-special-plans {
+	width: 33.4%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque3 li.banner-special-plans .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat -20px 0;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+/* bloque 4 */
+section#gallery ul.bloque4 li.image-events {
+	width: 66.6%;
+	top: 0;
+	left: 0;
+}
+section#gallery ul.bloque4 li.image-special-plans {
+	width: 33.4%;
+	top: 0;
+	right: 0;
+}
+section#gallery ul.bloque4 li.banner-security {
+	width: 16.7%;
+	height: 50%;
+	left: 0;
+	bottom: 0;
+	background: #a3b6b4 url(../img/banner-blue.png) repeat 50% 50%;
+}
+section#gallery ul.bloque4 li.banner-security .banner-int .tic {
+	background: url(../img/banner-blue-tic.png) no-repeat -20px 0;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+section#gallery ul.bloque4 li.banner-security .banner-int p {
+	color: #454545;	
+}
+/* bloque 5 */
+section#gallery ul.bloque5 li.image-security {
+	width: 33.4%;
+	top: 0;
+	left: 0;
+}
+section#gallery ul.bloque5 li.banner-boats {
+	width: 33.4%;
+	height: 65%;
+	top: 0;
+	left: 33.4%;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque5 li.banner-boats .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat -20px 0;
+	bottom: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+section#gallery ul.bloque5 li.image-boats {
+	width: 33.4%;
+	left: 33.4%;
+	bottom: 0;
+}
+section#gallery ul.bloque5 li.banner-catering {
+	width: 33.4%;
+	height: 50%;
+	bottom: 0;
+	right: 0;
+	background: #a3b6b4 url(../img/banner-blue.png) repeat 50% 50%;
+}
+section#gallery ul.bloque5 li.banner-catering .banner-int .tic {
+	background: url(../img/banner-blue-tic.png) no-repeat -60px 0;
+	top: -20px;
+	left: 50%;
+	margin-left: -10px;
+}
+section#gallery ul.bloque5 li.banner-catering .banner-int p {
+	color: #454545;	
+}
+section#gallery ul.bloque5 li.image-catering {
+	width: 33.4%;
+	top: 0;
+	right: 0;
+}
+/* bloque 6 */
+section#gallery ul.bloque6 li.banner-tickets {
+	width: 33.4%;
+	height: 100%; /* 100% de la altura de su ul */
+	top: 0;
+	left: 0;
+	background: #e7e7e7 url(../img/banner-grey.png) repeat 50% 50%;
+}
+section#gallery ul.bloque6 li.banner-tickets .banner-int .tic {
+	background: url(../img/banner-grey-tic.png) no-repeat -40px 0;
+	right: -20px;
+	top: 50%;
+	margin-top: -10px;
+}
+section#gallery ul.bloque6 li.image-tickets {
+	width: 66.6%;
+	top: 0;
+	right: 0;
+}
+/* section#contact */
+section#contact {
+	background: #f9f9f9 url(../img/contact-bg.jpg) repeat;
+	border-bottom: 10px solid #FFF;
+}
+section#contact .container {
+	width: 550px;
+	margin: 0 auto;
+	padding: 90px 0;
+}
+section#contact p {
+	text-align: center;	
+	background: url("../img/contact-quote.png") no-repeat center top;
+	padding: 10px 0;
+}
+section#contact ul {
+	text-align: center;	
+	margin: 30px auto;
+}
+section#contact ul li {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 1px;
+	text-indent: -99999px;
+	background-image: url(../img/media.png);
+	background-repeat: no-repeat;
+	background-size: 90px 30px;
+}
+section#contact ul li.facebook {
+	background-position: 0 0;
+}
+section#contact ul li.twitter {
+	background-position: -30px 0;
+}
+section#contact ul li.instagram {
+	background-position: -60px 0;
+}
+section#contact ul li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+section#contact form {
+	width: 550px;
+	margin: 0 auto;
+	position: relative;
+}
+section#contact form fieldset {
+	margin-bottom: 12px;
+	text-align: center;	
+}
+section#contact form fieldset label {
+	display: none;	
+}
+section#contact form fieldset input {
+	float: left;
+	margin-right: 2.5%;
+	width: 43.5%;
+	padding: 7px 2%;
+	font-size: 1em;
+	font-family: "futura-book", Arial, Helvetica, sans-serif;
+	color: #242424;
+	background: #eeeeee;
+	font-style: italic;
+	-webkit-appearance: none;
+	resize: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+section#contact form fieldset input:last-child {
+	margin-right: 0;	
+}
+section#contact form fieldset textarea {
+	float: left;
+	width: 94%;
+	padding: 7px 2%;
+	height: 70px;
+	font-size: 1em;
+	font-family: "futura-book", Arial, Helvetica, sans-serif;
+	color: #242424;
+	background: #eeeeee;
+	font-style: italic;
+	-webkit-appearance: none;
+	resize: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+section#contact form fieldset input[type="submit"] {
+	background: #ea6657;
+	width: 140px;
+	margin: 10px auto 0;
+	font-style: normal;
+	float: none;
+	cursor: pointer;
+}
+
+section#contact form.disabled fieldset {
+	opacity: .3;
+	filter: alpha(opacity=30)	
+}
+section#contact form fieldset input.error,
+section#contact form fieldset textarea.error {
+	color: #ea6657;	
+	background: #eee0df;
+}
+section#contact form .form-loading,
+section#contact form .form-thanks {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+}
+section#contact form .form-loading p,
+section#contact form .form-thanks p {
+	padding: 40px 0 0;
+	background: none;
+	color: #333;
+	font-style: italic;	
+}
+section#contact form .form-loading {
+	display: none;	
+}
+/* ************************** process */
+body.process {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.process p {
+	font-size: 0.75em;
+	padding: 80px 0 20px;
+	color: #454545;	
+	margin: 0 auto;
+    text-align: center;
+    width: 520px;
+}
+.process p a {
+	display: block;
+	margin: 20px auto 0;
+	text-align: center;	
+}
+
+/* ******************************************** */
+/* ******************************************** */
+@media screen and (max-width : 480px) {
+	html {
+		text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+		-ms-text-size-adjust: 100%;	
+	}
+	body {
+		box-shadow: inset 0 0 0 5px #fff;
+		-moz-box-shadow: inset 0 0 0 5px #fff;
+		-webkit-box-shadow: inset 0 0 0 5px #fff;
+	}
+	header {
+		border-top: 0;
+	}
+	header .container {
+		height: auto;
+		background: #bccbca;
+	}
+	header h1 img {
+		width: 150px;
+		height: 47px;
+		padding: 20px 0 0;	
+	}
+	header p {
+		width: 80%;
+		margin: 0 auto;
+		padding: 10px 0 60px;	
+	}
+	section#gallery .loading p {
+		padding-top: 100px;
+	}
+	section#gallery ul li {
+		position: relative !important;
+		width: 100% !important;
+		height: auto !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: auto !important;
+		bottom: auto !important;
+	}
+	section#gallery ul li.banner {
+		
+	}
+	section#gallery ul li.banner .banner-int p {
+		padding: 30px 0;
+		position: relative;	
+	}
+	section#gallery ul li.banner .banner-int p img {
+		width: 38px;
+		height: 45px;	
+	}
+	section#gallery ul li.banner .banner-int .tic {
+		left: 50% !important;
+		margin-left: -10px !important;
+		margin-top: auto !important;
+	}
+	section#gallery ul.bloque1 li.banner-chauffeur .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque2 li.banner-vip .banner-int .tic {
+		top: -20px;
+		bottom: auto;
+		background-position: -60px 0;
+	}
+	section#gallery ul.bloque2 li.banner-rent-a-house .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque3 li.banner-hotels .banner-int .tic {
+		top: -20px;
+		bottom: auto;
+		background-position: -60px 0;
+	}
+	section#gallery ul.bloque3 li.banner-events .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque3 li.banner-special-plans .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque4 li.banner-security .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque5 li.banner-boats .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque5 li.banner-catering .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque6 li.banner-tickets .banner-int .tic {
+		bottom: -20px;
+		top: auto;
+		background-position: -20px 0;
+	}
+	section#gallery ul.bloque3 li.banner-events {
+		z-index: 100;	
+	}
+	section#contact {
+		border-bottom: 0;
+	}
+	section#contact .container {
+		width: 90%;	
+		padding: 50px 0;
+	}
+	section#contact p {
+		background: none;
+		padding: 0;	
+	}
+	section#contact form {
+		width: 100%;	
+	}
+	section#contact form fieldset {
+		text-align: left;	
+	}
+}
+@media screen and (min-width : 480px) and (max-width : 768px) {
+	header .container {
+		height: 250px;
+		background-image: url(../img/header-bg-mv.jpg);
+	}
+	header h1 img {
+		width: 150px;
+		height: 47px;
+	}
+	section#gallery ul li.banner .banner-int p strong {
+		margin: 0 0 10px;	
+	}
+	section#gallery ul li.banner .banner-int p img {
+		width: 25px;
+		height: 30px;	
+	}
+	section#gallery ul.bloque2 li.banner-vip {
+		width: 50%;
+		height: 50%;	
+	}
+	section#gallery ul.bloque4 li.banner-security {
+		width: 50%;
+		height: 65%;	
+	}
+}
+@media screen and (min-width : 769px) and (max-width : 1024px) {
+	header .container {
+		height: 250px;
+		background-image: url(../img/header-bg-mv.jpg);
+	}
+	section#gallery ul li.banner .banner-int p strong {
+		margin: 0 0 10px;	
+	}
+	section#gallery ul li.banner .banner-int p img {
+		width: 38px;
+		height: 45px;	
+	}
+	section#gallery ul.bloque2 li.banner-vip {
+		width: 33.4%;
+		height: 50%;	
+	}
+	section#gallery ul.bloque4 li.banner-security {
+		width: 33.4%;
+		height: 65%;	
+	}
+	section#gallery ul.bloque5 li.banner-catering {
+		height: 65%;
+	}
+}
